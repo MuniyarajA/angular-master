@@ -26,7 +26,7 @@ function validatePhone(txtPhone) {
     }
 }
 //email validation
-var emailvalidation = function(){
+var emailvalidation = function(email){
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
 }
@@ -40,7 +40,17 @@ var validation = function(e){
       }
       else{
           e.nextElementSibling.style.display='block';
-          e.nextElementSibling.textContent="please enter valid"+e.placeholder;
+          e.nextElementSibling.textContent="please enter valid "+e.placeholder;
+      }
+    }
+    else if(e.placeholder=="Email"){
+      var valid=emailvalidation(e.value);
+      if(valid==true){
+        e.nextElementSibling.style.display='none';
+      }
+      else{
+          e.nextElementSibling.style.display='block';
+          e.nextElementSibling.textContent="please enter valid "+e.placeholder;
       }
     }
     else{
