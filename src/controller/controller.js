@@ -7,7 +7,7 @@ $scope.submitprocess = function(){
     var data = angular.element(result);
     //var valid = true;
     angular.forEach(data,function(e){
-      var valid = validation(e); 
+      var valid = validation(e);
     })
 }
 //ng-keyup
