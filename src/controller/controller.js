@@ -33,11 +33,22 @@ var emailvalidation = function(){
 //common validation
 var validation = function(e){
   if(e.value!=""){
+    if(e.placeholder=="phoneNumber"){
+      var valid=validatePhone(e.value);
+      if(valid==true){
+        e.nextElementSibling.style.display='none';
+      }
+      else{
+          e.nextElementSibling.style.display='block';
+          e.nextElementSibling.textContent="please enter valid"+e.placeholder;
+      }
+    }
+    else{
     e.nextElementSibling.style.display='none';
+    }
   }
   else{
     e.nextElementSibling.textContent="please enter the "+e.placeholder;
     e.nextElementSibling.style.display='block';        //var valid = false;
   }
-}
-});
+}});
