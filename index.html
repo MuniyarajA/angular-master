@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="src/css/bootstrap.css" />
+  <!-- jQuery -->
+  <script src="src/js/jquery.js"></script>
+
+  <!-- Angular JS -->
+  <script src="src/js/angular.js"></script>
+  <script src="src/js/angular-ui-route.js"></script>
+  <script src="src/js/angular-route.js"></script>
+  <!-- Bootstrap -->
+  <script src="src/js/bootstrap.js"></script>
+  <!--<script src="src/js/app.js"></script>-->
+  <script src="src/controller/controller.js"></script>
+  </head>
+<body ng-app="angularApp">
+
+  <div class="container" ng-controller="formCreation">
+    <div class="row">
+      <h4 style="text-align:center;">Form Validation </h4>
+      <div class="alert alert-danger alertmsgs" role="alert" style="text-align:center;display:none;">Please enter fields</div>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="firstName" class="col-sm-2 control-label">FirstName</label>
+          <div class="col-sm-10">
+            <input type="firstname" class="form-control alertmsg" placeholder="FirstName" ng-keyup="changevalid($event)">
+            <div class="alert alert-danger firstname" role="alert" style="text-align:center;display:none;margin-top:5px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">LastName</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control alertmsg" placeholder="LastName" ng-keyup="changevalid($event)">
+            <div class="alert alert-danger lastname" role="alert" style="text-align:center;display:none;margin-top:5px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" class="col-sm-2 control-label">PhoneNumber</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control alertmsg" placeholder="phoneNumber" ng-keyup="changevalid($event)">
+            <div class="alert alert-danger phonenumber" role="alert" style="text-align:center;display:none;margin-top:5px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control alertmsg" placeholder="Email" ng-keyup="changevalid($event)">
+            <div class="alert alert-danger email" role="alert" style="text-align:center;display:none;margin-top:5px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control alertmsg" placeholder="Password" ng-keyup="changevalid($event)">
+            <div class="alert alert-danger password" role="alert" style="text-align:center;display:none;margin-top:5px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <a class="btn btn-primary" ng-click="submitprocess()">submit</a>
+          </div>
+        </div>
+      </form>
+
+    </body>
+    </html>
